@@ -1,0 +1,20 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+<div>
+    <div style="padding: 20px">
+        <label>User Id</label>
+        <input style="padding: 10px;" type="text" formControlName="userId" >
+      </div>
+
+      <div style="padding: 20px">
+        <label>Password</label>
+        <input style="padding: 10px;" type="text" formControlName="password" >
+      </div>
+</div>
+<div>
+    <button style="padding: 10px" [disabled]="loginForm.invalid">Login</button>
+</div>
+<div>
+    <h1 style="text-align: center" [ngStyle]="{'color': getcolor()}">{{message}}</h1>
+  </div>
+  
+</form>

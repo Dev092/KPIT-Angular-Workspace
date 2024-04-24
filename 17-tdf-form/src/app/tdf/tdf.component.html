@@ -1,0 +1,22 @@
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <div>
+      <label >Student Id</label>
+      <input type="number" name="studentId" ngModel required>
+    </div>
+    <div>
+      <label>Student Name</label>
+      <input type="text" name="studentName" ngModel required >
+    </div>
+    <div>
+      <label>Student Score</label>
+      <input type="number" name="studentScore" ngModel required>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-danger">Add Student</button>
+    </div>
+  </form>
+
+
+  <div *ngFor="let s of students">
+    <div>{{s.studentId}} | {{s.studentName}} | {{s.studentScore}}</div>
+  </div>

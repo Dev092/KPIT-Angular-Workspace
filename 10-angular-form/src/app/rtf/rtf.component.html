@@ -1,0 +1,47 @@
+<form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+
+    <div>
+      <label>Student Id</label>
+      <input type="number" formControlName="studentId" >
+    </div>
+
+    <div>
+      <label>Student Name</label>
+      <input type="text" formControlName="studentName" >
+    </div>
+
+    <div>
+      <button type="submit" class="btn btn-danger" [disabled]="studentForm.invalid">Add Student</button>
+    </div>
+
+    <!--reactive driven form
+         <div>
+        {{studentForm.value | json}}
+    </div>>
+
+    <div>
+        {{data | json}}
+    </div> -->
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>student Id</th>
+                <th>student name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let s of student">
+                <th>{{s.studentId}}</th>
+                <th>{{s.studentName}}</th>
+            </tr>
+
+        </tbody>
+       
+
+    </table>
+    
+   
+
+
+  </form>

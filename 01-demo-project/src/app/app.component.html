@@ -1,0 +1,6 @@
+<div *ngFor="let s of works">
+  <app-todolist [work]="s"></app-todolist>
+</div>
+<div>
+  <app-addwork (add)="work($event)"></app-addwork>
+</div>

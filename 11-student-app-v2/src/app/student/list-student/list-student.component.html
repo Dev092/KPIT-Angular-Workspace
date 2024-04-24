@@ -1,0 +1,16 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>student Id</th>
+            <th>student Name</th>
+            <th>student Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of students" [ngStyle]="{'background-color': getBackgroundColor()}">
+            <td>{{s.studentId }}</td>
+            <td>{{s.studentName | titlecase}}</td>
+            <td [ngClass]="{color: s.studentScore < 80? true: false}">{{s.studentScore/100 | percent}}</td>
+        </tr>
+    </tbody>
+</table>

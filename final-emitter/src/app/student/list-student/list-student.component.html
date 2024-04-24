@@ -1,0 +1,22 @@
+<!-- <p>list-student works!</p>
+
+<p>{{student.studentId}} | {{student.studentName}}</p> -->
+
+<hr>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Student Id</th>
+                <th>Student Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th  [ngStyle]="{'color': student.studentId < 5 ? 'red' : 'green'}">{{student.studentId}}</th>
+                <th>{{student.studentName}}</th>
+            </tr>
+        </tbody>
+    </table>
+</div>

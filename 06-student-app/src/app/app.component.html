@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">Hello, DEV!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    
+  </div>
+
+
+  <div>
+    <app-add-student (add)="addStudent($event)"></app-add-student>
+  </div>
+<!--
+<div *ngIf="students.length > 0; else #noStudent">
+  <div *ngFor="let s of students">
+    <app-list-students [student]="s"></app-list-students>
+  </div>
+</div>
+<ng-template #noStudent>
+  <p class="">No student present</p>
+</ng-template>
+</div>
+
+
+-->
+<div *ngIf="students.length > 0; else noStudent">
+  <div *ngFor="let s of students">
+    <app-list-students [student]="s"></app-list-students>
+  </div>
+</div>
+
+<ng-template #noStudent>
+  <p class="">No student present</p>
+</ng-template>
+</div>

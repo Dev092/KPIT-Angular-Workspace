@@ -1,0 +1,8 @@
+<div>
+  <div>
+    <app-add-employee (add)="addemployee($event)"></app-add-employee>
+  </div>
+  <div *ngFor="let e of employees">
+    <app-list-employee [employee]="e"></app-list-employee>
+  </div>
+</div>
